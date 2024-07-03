@@ -1,5 +1,5 @@
-import Table from './views/Table'
-import Navbar from './views/Navbar'
+import Table from './components/Table'
+import Navbar from './components/Navbar'
 
 function App() {
 

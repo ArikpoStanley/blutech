@@ -4,6 +4,8 @@ import axios from 'axios';
 const Table = () => {
   const [data, setData] = useState([]);
   const [expandedRows, setExpandedRows] = useState([]);
+  const[error, setError] = useState()
+  const [loading, setLoading] = useState()
 
   const handleRowClick = (index) => {
     setExpandedRows((prevExpandedRows) => {
@@ -12,9 +14,8 @@ const Table = () => {
       } else {
         return [...prevExpandedRows, index];
       }
-    });
+    })
   };
-
   useEffect(() => {
     const fetchData = async () => {
       try {
